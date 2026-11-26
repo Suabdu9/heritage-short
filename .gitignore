@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+kaggle/build/
+outputs/assemble/
+outputs/final/
+outputs/radio/
+outputs/smoke/
+outputs/keyframes/explore/
+*.src.mp3
+*.src.wav
+outputs/voices/

@@ -1,0 +1,6 @@
+requests>=2.31
+jsonschema>=4.20
+pillow>=10.0
+kaggle>=1.6
+pytest>=8.0
+imageio-ffmpeg>=0.5

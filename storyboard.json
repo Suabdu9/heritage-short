@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "title": "Flying Toward Each Other",
+  "title_native": "ወደ እርስ በርሳቸው መብረር",
+  "logline": "Before they met, my mother and my father each dreamed for years that they could fly; after they married, the dreams stopped, and my father thinks he knows why.",
+  "audience": "Our family and relatives, mostly Amharic speakers, watching on their phones after it is forwarded on WhatsApp and TikTok; younger cousins abroad read the English subtitles.",
+  "intent": "At the end, the viewer should feel that my parents' meeting was meant to be, smile at my father's explanation, and want to tell their own family story.",
+  "language": "am",
+  "narration_review": {
+    "approved": true,
+    "by": "the author (native Amharic speaker)",
+    "date": "2026-11-26",
+    "notes": "all 9 lines approved; voice am-yohanes-calm chosen after listening to the audition"
+  },
+  "draft": false,
+  "style": {
+    "block": "hand-painted gouache illustration, warm earthy palette of ochre, indigo and soft gold, visible brush texture, gentle film grain, dreamlike soft light, Ethiopian highland setting, main subject centred in the frame with calm uncluttered space around it, no text, no letters",
+    "negative": "duplicate person, twins, two copies of the same person, extra people, crowd, text, letters, watermark, logo, extra fingers, deformed hands, distorted face, photorealistic, 3d render, harsh shadows"
+  },
+  "characters": [
+    {
+      "id": "mother",
+      "name": "My mother (young)",
+      "description": "a young Ethiopian Muslim woman in her early twenties, warm brown skin, soft round face, hair fully covered by a soft cream-coloured hijab, long modest white dress with a thin embroidered border at the sleeves",
+      "real_person": true,
+      "consent_id": "mother",
+      "sheet_seed": 1101
+    },
+    {
+      "id": "father",
+      "name": "My father (young)",
+      "description": "a young Ethiopian Muslim man in his mid twenties, brown skin, short dark curly hair, slim clean-shaven face with a gentle smile, light blue collared shirt and dark trousers, no headscarf",
+      "real_person": true,
+      "consent_id": "father",
+      "sheet_seed": 2202
+    }
+  ],
+  "models": {
+    "image": {
+      "provider": "cloudflare",
+      "model": "@cf/black-forest-labs/flux-2-klein-4b",
+      "fallback_model": "@cf/black-forest-labs/flux-1-schnell",
+      "steps": 4,
+      "width": 1024,
+      "height": 1024
+    },
+    "tts": {
+      "provider": "addis",
+      "voice": "am-yohanes-calm",
+      "fallback_provider": "gemini",
+      "fallback_voice": "Sulafat",
+      "style_prompt": "Read slowly and warmly, like telling a family story at night, with small pauses between sentences."
+    },
+    "video": {
+      "provider": "kenburns",
+      "model": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+      "draft_size": "480x480",
+      "final_size": "704x704",
+      "steps": 30,
+      "frames": 121
+    },
+    "music": {
+      "provider": "kaggle",
+      "model": "ACE-Step/Ace-Step1.5",
+      "candidates": 3,
+      "chosen": 0
+    },
+    "text": {
+      "model": "gemini-3.8-flash"
+    }
+  },
+  "narration": {
+    "lead_in_s": 1.0,
+    "tail_s": 0.8,
+    "gap_s": 0.4
+  },
+  "music": {
+    "caption": "instrumental, gentle Ethiopian-inspired film score, soft krar plucks and warm strings, airy flute melody that rises like flight, slow, tender, nostalgic, sparse texture leaving room for a narrator, ends resolved and warm",
+    "bpm": 72,
+    "key": "D major",
+    "duration_s": 90,
+    "seed": 4242,
+    "duck": {
+      "threshold": 0.02,
+      "ratio": 6,
+      "attack_ms": 300,
+      "release_ms": 1500,
+      "music_gain_db": -6
+    },
+    "cues": [
+      {
+        "at_shot": "s01",
+        "description": "Music starts soft and airy: the dream theme on flute"
+      },
+      {
+        "at_shot": "s05",
+        "description": "Warmth builds as they meet and marry"
+      },
+      {
+        "at_shot": "s08",
+        "description": "Music thins to almost nothing when the dreams stop"
+      },
+      {
+        "at_shot": "s09",
+        "description": "Dream theme returns, resolved, under the father's line; swells into the end card"
+      }
+    ]
+  },
+  "end_card": {
+    "text": "Made with AI",
+    "subtext": "Images: FLUX (Cloudflare Workers AI)\nMotion: Wan 2.2\nMusic: ACE-Step 1.5\nAmharic voice: Addis AI\n\nFor my mother and my father",
+    "duration_s": 3
+  },
+  "shots": [
+    {
+      "id": "s01",
+      "beat": "Opening: the dream",
+      "reason": "Establishing shot that sets the dreamlike night and the idea of flight before we meet anyone.",
+      "shot_size": "extreme_wide",
+      "duration_s": 6,
+      "characters": [],
+      "image_prompt": "a vast starry night sky over sleeping Ethiopian highland villages with tin roofs and eucalyptus trees, a faint path of light across the sky, seen from high above",
+      "motion_prompt": "slow upward camera tilt, stars twinkle softly, thin clouds drift",
+      "kenburns": {
+        "zoom_from": 1.0,
+        "zoom_to": 1.12,
+        "pan": "up"
+      },
+      "narration": "ከመገናኘታቸው በፊት፣ እናቴና አባቴ በሕልማቸው ይበሩ ነበር።",
+      "subtitle_en": "Before they ever met, my mother and my father used to fly in their dreams.",
+      "seed": 101
+    },
+    {
+      "id": "s02",
+      "beat": "Mother dreams",
+      "reason": "Introduces my mother and her dream, so the audience meets her first as a dreamer.",
+      "shot_size": "medium",
+      "duration_s": 7,
+      "characters": [
+        "mother"
+      ],
+      "image_prompt": "only one person in the whole picture: {mother}, alone, floating peacefully in the night air above the corrugated tin roof of her family house, arms open, her long headscarf and dress flowing gently behind her, moonlight on her face",
+      "motion_prompt": "she rises slowly upward, her shawl ripples in the wind, camera holds still",
+      "kenburns": {
+        "zoom_from": 1.05,
+        "zoom_to": 1.15,
+        "pan": "up"
+      },
+      "narration": "እናቴ ከቤታቸው ጣሪያ በላይ ተነስታ፣ ከደመናት ጋር ስትበር ታያለች።",
+      "subtitle_en": "My mother would see herself rise above the roof of her family's house and fly among the clouds.",
+      "seed": 202
+    },
+    {
+      "id": "s03",
+      "beat": "Father dreams",
+      "reason": "Mirrors shot two with my father, so the parallel between them is clear without explaining it.",
+      "shot_size": "medium",
+      "duration_s": 7,
+      "characters": [
+        "father"
+      ],
+      "image_prompt": "only one person in the whole picture: {father}, alone, flying calmly through the night sky above a different small town with the minaret of a small mosque and acacia trees, arms stretched out like wings, moonlight on his face",
+      "motion_prompt": "he glides slowly from left to right, his shirt moves in the wind, camera tracks gently with him",
+      "kenburns": {
+        "zoom_from": 1.15,
+        "zoom_to": 1.05,
+        "pan": "right"
+      },
+      "narration": "በሌላ ከተማ ደግሞ፣ አባቴም ያንኑ ሕልም ያልም ነበር።",
+      "subtitle_en": "In another town, my father was dreaming the very same dream.",
+      "seed": 303
+    },
+    {
+      "id": "s04",
+      "beat": "Years apart",
+      "reason": "Compresses the years they flew without knowing about each other; the distance between the two figures carries the beat.",
+      "shot_size": "extreme_wide",
+      "duration_s": 7,
+      "characters": [
+        "mother",
+        "father"
+      ],
+      "image_prompt": "exactly two people, one woman and one man, both flying, tiny and far apart across a huge sky above the Ethiopian highlands at dawn: on the left {mother}; on the right {father}; nobody standing on the ground, wide mountains and mist below",
+      "motion_prompt": "slow wide pan across the sky, clouds drift, the two figures glide gently",
+      "kenburns": {
+        "zoom_from": 1.0,
+        "zoom_to": 1.08,
+        "pan": "left"
+      },
+      "narration": "ለዓመታት ሁለቱም ይበሩ ነበር፤ አንዳቸው ስለሌላው ምንም ሳያውቁ።",
+      "subtitle_en": "For years they both flew, neither of them knowing about the other.",
+      "seed": 404
+    },
+    {
+      "id": "s05",
+      "beat": "They marry",
+      "reason": "The turning point: they meet and marry, shown as one warm moment instead of a long courtship.",
+      "shot_size": "medium",
+      "duration_s": 6,
+      "characters": [
+        "mother",
+        "father"
+      ],
+      "image_prompt": "exactly two people, one woman and one man, standing side by side and smiling at their nikah: on the left {mother}, in an embroidered white wedding dress with a matching white hijab; on the right {father}, in a white thobe and an embroidered white kufi cap; flower petals in the air, warm golden afternoon light",
+      "motion_prompt": "petals fall slowly, the couple smile at each other, camera pushes in gently",
+      "kenburns": {
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
+        "pan": "none"
+      },
+      "narration": "ከዚያም ተገናኙ፤ ተጋቡም።",
+      "subtitle_en": "Then they met, and they married.",
+      "seed": 505
+    },
+    {
+      "id": "s06",
+      "beat": "The discovery",
+      "reason": "Sets the discovery in a coffee ceremony, the place where Ethiopian families tell stories.",
+      "shot_size": "medium",
+      "duration_s": 7,
+      "characters": [
+        "mother",
+        "father"
+      ],
+      "image_prompt": "only one person in the picture: {mother}, sitting on a low wooden stool, pouring coffee from a traditional round black clay Ethiopian jebena pot with a long neck into small white cups on a tray, inside a simple Ethiopian Muslim home: woven mat on the floor, a framed Arabic calligraphy wall hanging, a prayer rug folded on a bench, a little frankincense smoke and a warm lamp",
+      "motion_prompt": "steam and frankincense smoke rise slowly, she pours coffee, camera holds still",
+      "kenburns": {
+        "zoom_from": 1.1,
+        "zoom_to": 1.0,
+        "pan": "none"
+      },
+      "narration": "አንድ ምሽት፣ ቡና እየተፈላ፣ እናቴ ስለ ሕልሟ ነገረችው።",
+      "subtitle_en": "One evening, over coffee, my mother told him about her dream.",
+      "seed": 606
+    },
+    {
+      "id": "s07",
+      "beat": "Me too",
+      "reason": "Close-up for the emotional surprise: my father realising he had the same dream.",
+      "shot_size": "medium_close",
+      "duration_s": 6,
+      "characters": [
+        "father"
+      ],
+      "image_prompt": "only one person in the picture: {father}, sitting on a cushioned bench in the same simple Ethiopian Muslim home with a woven mat and a framed Arabic calligraphy wall hanging, warm lamplight, a surprised and tender smile slowly forming, holding one small coffee cup gently with one hand, natural relaxed hand with five fingers, medium close-up",
+      "motion_prompt": "he looks up slowly and smiles, lamp light flickers softly, camera static",
+      "kenburns": {
+        "zoom_from": 1.0,
+        "zoom_to": 1.12,
+        "pan": "none"
+      },
+      "narration": "አባቴ ዝም አለ። ከዚያም፣ «እኔም እበር ነበር» አላት።",
+      "subtitle_en": "My father went quiet. Then he said, \"I used to fly too.\"",
+      "seed": 707
+    },
+    {
+      "id": "s08",
+      "beat": "The dreams stop",
+      "reason": "An empty sky shows the dreams have stopped; the absence is the strange part of the story.",
+      "shot_size": "wide",
+      "duration_s": 6,
+      "characters": [],
+      "image_prompt": "an empty calm night sky above a single small house with one warm lit window, two birds resting together on the roof edge, quiet and still",
+      "motion_prompt": "almost still, the window light glows, a faint breeze moves the trees, camera static",
+      "kenburns": {
+        "zoom_from": 1.12,
+        "zoom_to": 1.0,
+        "pan": "down"
+      },
+      "narration": "የሚገርመው ደግሞ፣ ከተጋቡ በኋላ ሁለቱም መብረር አቆሙ።",
+      "subtitle_en": "And strangely, after they married, both of them stopped flying.",
+      "seed": 808
+    },
+    {
+      "id": "s09",
+      "beat": "Father's explanation",
+      "reason": "My father's explanation is the heart of the film, so it gets the longest shot and both of them together.",
+      "shot_size": "medium",
+      "duration_s": 9,
+      "characters": [
+        "mother",
+        "father"
+      ],
+      "image_prompt": "exactly two people, one woman and one man, sitting close together on a flat rooftop at dawn, seen from behind and slightly to the side: on the left {mother}, her head resting on his shoulder; on the right {father}; they look at the soft golden sky where two birds fly toward each other",
+      "motion_prompt": "the two birds glide toward each other in the sky, the couple sit still, camera slowly pulls back",
+      "kenburns": {
+        "zoom_from": 1.15,
+        "zoom_to": 1.0,
+        "pan": "none"
+      },
+      "narration": "አባቴ ሁሌም እንዲህ ይላል፦ «ምናልባት ስንበር የነበርነው ወደ እርስ በርሳችን ነበር። ከተገናኘን በኋላ መብረር አላስፈለገንም።»",
+      "subtitle_en": "My father always says: \"Maybe we were flying toward each other all along. Once we met, we didn't need to fly anymore.\"",
+      "seed": 909
+    },
+    {
+      "id": "s10",
+      "beat": "Closing image",
+      "reason": "Closing image that returns to the opening sky, now at sunrise, to close the flight motif.",
+      "shot_size": "extreme_wide",
+      "duration_s": 5,
+      "characters": [],
+      "image_prompt": "the same Ethiopian highland village from the opening, now at sunrise, golden light over the tin roofs and eucalyptus trees, two birds flying side by side into the sun",
+      "motion_prompt": "slow camera tilt down toward the village, the two birds fly away together, light grows warmer",
+      "kenburns": {
+        "zoom_from": 1.1,
+        "zoom_to": 1.0,
+        "pan": "down"
+      },
+      "narration": "",
+      "subtitle_en": "",
+      "seed": 1010
+    }
+  ]
+}
