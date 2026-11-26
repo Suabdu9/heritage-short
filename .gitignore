@@ -11,3 +11,17 @@ outputs/keyframes/explore/
 *.src.mp3
 *.src.wav
 outputs/voices/
+
+# Local credentials
+.env.*
+!.env.example
+
+# Generated media and intermediate outputs
+outputs/
+
+# Private family material
+assets/private/
+consent.json
+
+# Temporary inspection files
+objects.txt
