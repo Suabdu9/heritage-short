@@ -1,0 +1,26 @@
+{
+  "_readme": "One entry per real person shown or voiced. 'granted' stays false until the person has agreed. The pipeline refuses to generate their likeness (scope 'likeness') or narrate their story/words (scope 'story') until it is true. Details of how consent was given go in ETHICS.md.",
+  "mother": {
+    "person": "My mother",
+    "granted": true,
+    "scope": [
+      "likeness",
+      "story"
+    ],
+    "date": "2026-11-26",
+    "method": "in person",
+    "evidence": "voice note saved privately"
+  },
+  "father": {
+    "person": "My father",
+    "granted": true,
+    "scope": [
+      "likeness",
+      "story",
+      "quoted_words"
+    ],
+    "date": "2026-11-26",
+    "method": "in person",
+    "evidence": "voice note saved privately"
+  }
+}

@@ -19,9 +19,5 @@ outputs/voices/
 # Generated media and intermediate outputs
 outputs/
 
-# Private family material
-assets/private/
-consent.json
-
 # Temporary inspection files
 objects.txt
